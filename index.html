@@ -98,7 +98,7 @@
                 <!-- Sẽ được tạo bởi JavaScript -->
             </div>
 
-            <!-- Alphabet Details -->
+            <!-- Alphabet Details (Desktop) -->
             <div class="alphabet-details">
                 <div class="detail-box">
                     <h3 id="alphabet-char-name">Chọn một ký tự</h3>
@@ -169,8 +169,19 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>⚡Tiếng Việt Pro v1.0 | Được thiết kế cho người Nhật ⚡</p>
+        <p>⚡ Cyber Tiếng Việt Pro v1.0 | Được thiết kế cho người Nhật ⚡</p>
     </footer>
+
+    <!-- Floating Audio Player (Mobile) -->
+    <div id="floating-player" class="floating-player hidden">
+        <div class="floating-player-content">
+            <div class="floating-text" id="floating-text">Chọn chữ để nghe phát âm</div>
+            <button class="floating-btn-play" id="floating-play-btn" onclick="playFloatingAudio()">
+                🔊 Phát Âm
+            </button>
+            <button class="floating-btn-close" onclick="closeFloatingPlayer()">×</button>
+        </div>
+    </div>
 
     <!-- Modal Shadowing Mode -->
     <div id="shadowing-modal" class="modal">
