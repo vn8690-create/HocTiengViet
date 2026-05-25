@@ -1,74 +1,74 @@
 {
   "workplace_dialogues": [
-    {
-      "id": 1,
-      "title": "Nhắc nhở an toàn",
-      "vietnamese": "Bạn phải đeo kính bảo vệ khi làm việc ở đây. Đó là quy tắc an toàn của chúng tôi.",
-      "japanese": "ここで作業する場合、保護メガネを着用する必要があります。これは私たちの安全ルールです。",
-      "romanization": "Bạn phải đeo kính bảo vệ khi làm việc ở đây. Đó là quy tắc an toàn của chúng tôi."
-    },
-    {
-      "id": 2,
-      "title": "Dọn dẹp vệ sinh 5S",
-      "vietnamese": "Bây giờ chúng ta cần sắp xếp khu vực làm việc, loại bỏ những thứ không cần thiết, và vệ sinh sạch sẽ theo tiêu chuẩn 5S.",
-      "japanese": "今、私たちは作業エリアを整理し、不要なものを取り除き、5S基準に従ってきれいに掃除する必要があります。",
-      "romanization": "Bây giờ chúng ta cần sắp xếp khu vực làm việc, loại bỏ những thứ không cần thiết, và vệ sinh sạch sẽ theo tiêu chuẩn 5S."
-    },
-    {
-      "id": 3,
-      "title": "Báo cáo sản phẩm lỗi",
-      "vietnamese": "Tôi phát hiện ra một lỗi trong sản phẩm này. Chúng ta cần báo cáo ngay cho quản lý và không được bán sản phẩm lỗi này.",
-      "japanese": "この製品に欠陥があることに気付きました。すぐにマネージャーに報告する必要があり、この欠陥製品は販売できません。",
-      "romanization": "Tôi phát hiện ra một lỗi trong sản phẩm này. Chúng ta cần báo cáo ngay cho quản lý và không được bán sản phẩm lỗi này."
-    },
-    {
-      "id": 4,
-      "title": "Hỏi về quy trình làm việc",
-      "vietnamese": "Em xin hỏi, quy trình kiểm tra chất lượng sản phẩm như thế nào? Anh có thể hướng dẫn em không?",
-      "japanese": "申し訳ございませんが、製品品質検査のプロセスはどのようなものですか？ご指導していただけますか？",
-      "romanization": "Em xin hỏi, quy trình kiểm tra chất lượng sản phẩm như thế nào? Anh có thể hướng dẫn em không?"
-    },
-    {
-      "id": 5,
-      "title": "Báo cáo tình trạng công việc",
-      "vietnamese": "Công việc hôm nay đã hoàn thành 80%. Chúng tôi sẽ hoàn tất phần còn lại vào chiều nay.",
-      "japanese": "今日の仕事は80％完了しました。残りの部分は今日の午後に完了します。",
-      "romanization": "Công việc hôm nay đã hoàn thành 80%. Chúng tôi sẽ hoàn tất phần còn lại vào chiều nay."
-    },
-    {
-      "id": 6,
-      "title": "Yêu cầu hỗ trợ",
-      "vietnamese": "Anh ơi, máy này có vấn đề rồi. Liệu anh có thể giúp tôi sửa chữa nó không?",
-      "japanese": "すみません、この機械に問題があります。修理を手伝っていただけますか？",
-      "romanization": "Anh ơi, máy này có vấn đề rồi. Liệu anh có thể giúp tôi sửa chữa nó không?"
-    },
-    {
-      "id": 7,
-      "title": "Tuân thủ tiêu chuẩn an toàn",
-      "vietnamese": "Vui lòng không chạy hoặc đi nhanh trên sàn xưởng. Điều này có thể gây nguy hiểm cho bạn và những người khác.",
-      "japanese": "工場の床を走ったり、速く歩いたりしないでください。これはあなたと他の人に危険を及ぼす可能性があります。",
-      "romanization": "Vui lòng không chạy hoặc đi nhanh trên sàn xưởng. Điều này có thể gây nguy hiểm cho bạn và những người khác."
-    },
-    {
-      "id": 8,
-      "title": "Báo cáo về hiệu suất",
-      "vietnamese": "Tháng này, nhóm của chúng ta đã tăng năng suất lên 15% so với tháng trước. Rất tốt!",
-      "japanese": "今月、私たちのチームは先月と比べて生産性を15％向上させました。素晴らしい！",
-      "romanization": "Tháng này, nhóm của chúng ta đã tăng năng suất lên 15% so với tháng trước. Rất tốt!"
-    },
-    {
-      "id": 9,
-      "title": "Hỏi về lịch trình",
-      "vietnamese": "Khi nào chúng ta sẽ bắt đầu dự án mới? Tôi muốn biết lịch trình cụ thể.",
-      "japanese": "新しいプロジェクトをいつ開始しますか？具体的なスケジュールを知りたいです。",
-      "romanization": "Khi nào chúng ta sẽ bắt đầu dự án mới? Tôi muốn biết lịch trình cụ thể."
-    },
-    {
-      "id": 10,
-      "title": "Cảm ơn và lời tạm biệt",
-      "vietnamese": "Cảm ơn bạn rất nhiều vì đã giúp tôi ngày hôm nay. Hẹn gặp lại bạn vào ngày mai.",
-      "japanese": "今日、私を手伝ってくれてありがとうございました。明日またお会いしましょう。",
-      "romanization": "Cảm ơn bạn rất nhiều vì đã giúp tôi ngày hôm nay. Hẹn gặp lại bạn vào ngày mai."
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Nhắc nhở an toàn máy cắt (裁断機の安全確認)",
+    "vietnamese": "Khi dùng máy cắt, tuyệt đối không được đưa tay vào vùng nguy hiểm.",
+    "japanese": "裁断機を使用するとき、危険エリアには絶対に手を入れないでください。",
+    "romanization": "Khi dung may cat, tuyet doi khong duoc dua tay vao vung nguy hiem."
+  },
+  {
+    "id": 2,
+    "title": "Kiểm tra lệch màu in (印刷の色ズレ確認)",
+    "vietnamese": "Màu in này bị lệch rồi. Hãy điều chỉnh lại trục mực ngay.",
+    "japanese": "印刷の色がズレています。すぐにインク軸を調整してください。",
+    "romanization": "Mau in nay bi lech roi. Hay dieu chinh lai truc muc ngay."
+  },
+  {
+    "id": 3,
+    "title": "Báo cáo kẹt giấy máy gấp (折機の紙詰まり報告)",
+    "vietnamese": "Báo cáo, máy gấp đang bị kẹt giấy và dừng đột ngột.",
+    "japanese": "報告します、折機が紙詰まりを起こして急に止まりました。",
+    "romanization": "Bao cao, may gap dang bi ket giay va dung dot ngot."
+  },
+  {
+    "id": 4,
+    "title": "Kiểm tra bọt khí khi cán màng (ラミネートの気泡チェック)",
+    "vietnamese": "Hãy kiểm tra kỹ, sản phẩm cán màng không được có bọt khí.",
+    "japanese": "しっかり確認してください、ラミネート製品に気泡が入ってはいけません。",
+    "romanization": "Hay kiem tra ky, san pham can mang khong duoc co bot khi."
+  },
+  {
+    "id": 5,
+    "title": "Yêu cầu dập ghim/đóng gáy (製本のホチキス留め指示)",
+    "vietnamese": "Hãy kiểm tra xem gáy sách có bị lệch ghim không.",
+    "japanese": "本の背表紙のホチキス留めがズレていないか確認してください。",
+    "romanization": "Hay kiem tra xem gay sach co bi lech ghim khong."
+  },
+  {
+    "id": 6,
+    "title": "Vệ sinh lô cuốn mực (印刷ローラーの清掃)",
+    "vietnamese": "Hết ca làm việc, phải vệ sinh sạch lô cuốn mực bằng dung dịch.",
+    "japanese": "作業シフトが終わったら、必ず洗浄液でインクローラーを掃除してください。",
+    "romanization": "Het ca lam viec, phai ve sinh sach lo cuon muc bang dung dich."
+  },
+  {
+    "id": 7,
+    "title": "Kiểm tra nếp nhăn giấy (紙のシワチェック)",
+    "vietnamese": "Giấy bị nhăn rồi! Hãy dừng máy và kiểm tra lại trục cấp giấy.",
+    "japanese": "紙にシワが寄っています！機械を止めて給紙軸を確認してください。",
+    "romanization": "Giay bi nhan roi! Hay dung may va kiem tra lai truc cap giay."
+  },
+  {
+    "id": 8,
+    "title": "Xử lý lỗi thiếu trang/ngược trang (丁合の乱丁・落丁対策)",
+    "vietnamese": "Cuốn sách này bị ngược trang rồi. Phải kiểm tra lại khâu xếp trang.",
+    "japanese": "この本はページが逆になっています。丁合（ちょうあい）工程を再確認してください。",
+    "romanization": "Cuon sach nay bi nguoc trang roi. Phai kiem tra lai khau xep trang."
+  },
+  {
+    "id": 9,
+    "title": "Thay dao cắt định kỳ (裁断刃の定期交換)",
+    "vietnamese": "Dao cắt bị cùn rồi, đường cắt không đẹp. Hãy thay dao mới.",
+    "japanese": "裁断刃が鈍くなって、切り口が綺麗ではありません。新しい刃に交換してください。",
+    "romanization": "Dao cat bi cun roi, duong cat khong dep. Hay thay dao moi."
+  },
+  {
+    "id": 10,
+    "title": "Kiểm tra số lượng thành phẩm (完成品の数量確認)",
+    "vietnamese": "Đóng gói đủ năm mươi cuốn một thùng rồi dán nhãn lên nhé.",
+    "japanese": "1箱に50冊ずつ梱包して、ラベルを貼ってくださいね。",
+    "romanization": "Dong goi du nam muoi cuon mot thung roi dan nhan len nhe."
+  }
+]
 }
