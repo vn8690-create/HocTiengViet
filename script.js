@@ -220,6 +220,30 @@ function setupEventListeners() {
     }
 }
 
+/* ===== UNIVERSAL SPEECH FUNCTION ===== */
+/**
+ * Phát âm text với Web Speech API
+ * @param {string} text - Text cần phát âm
+ * @param {string} lang - Mã ngôn ngữ (mặc định: 'vi-VN')
+ * @param {number} rate - Tốc độ phát âm (0.5-2, mặc định: 0.8)
+ */
+function speakText(text, lang = 'vi-VN', rate = 0.8) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        
+        // CHỖ FIX: Chuyển sang chữ thường + loại khoảng trắng thừa
+        let cleanText = text.toLowerCase().trim();
+        
+        let speech = new SpeechSynthesisUtterance(cleanText);
+        speech.lang = lang;
+        speech.rate = rate;
+        speech.pitch = 1.0;
+        speech.volume = 1.0;
+        
+        window.speechSynthesis.speak(speech);
+    }
+}
+
 /* ===== SCREEN MANAGEMENT ===== */
 function switchScreen(screenName) {
     // Hide all screens
@@ -297,14 +321,8 @@ function playAlphabetAudio() {
     const item = vietnameseData.alphabet.find(a => a.char === appState.currentAlphabet);
     if (!item) return;
 
-    const utterance = new SpeechSynthesisUtterance(item.pronunciation);
-    utterance.lang = 'vi-VN';
-    utterance.rate = 0.8;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+    // Sử dụng universal speakText function
+    speakText(item.pronunciation, 'vi-VN', 0.8);
 
     // Animate button
     animateButton('alphabet-play-btn');
@@ -364,14 +382,8 @@ function speakGrammar(id) {
     const item = vietnameseData.grammar.find(g => g.id == id);
     if (!item) return;
 
-    const utterance = new SpeechSynthesisUtterance(item.vietnamese);
-    utterance.lang = 'vi-VN';
-    utterance.rate = 0.8;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+    // Sử dụng universal speakText function
+    speakText(item.vietnamese, 'vi-VN', 0.8);
 
     animateButton(event.target);
 }
@@ -415,14 +427,8 @@ function speakDialogue(id) {
     const item = vietnameseData.dialogues.find(d => d.id === id);
     if (!item) return;
 
-    const utterance = new SpeechSynthesisUtterance(item.vietnamese);
-    utterance.lang = 'vi-VN';
-    utterance.rate = 0.8;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+    // Sử dụng universal speakText function
+    speakText(item.vietnamese, 'vi-VN', 0.8);
 
     animateButton(event.target);
 }
@@ -554,3 +560,4 @@ window.startShadowingMode = startShadowingMode;
 window.closeShadowingModal = closeShadowingModal;
 window.startShadowing = startShadowing;
 window.completeShadowingMode = completeShadowingMode;
+window.speakText = speakText;
