@@ -1,0 +1,74 @@
+{
+  "workplace_dialogues": [
+    {
+      "id": 1,
+      "title": "Nhắc nhở an toàn",
+      "vietnamese": "Bạn phải đeo kính bảo vệ khi làm việc ở đây. Đó là quy tắc an toàn của chúng tôi.",
+      "japanese": "ここで作業する場合、保護メガネを着用する必要があります。これは私たちの安全ルールです。",
+      "romanization": "Bạn phải đeo kính bảo vệ khi làm việc ở đây. Đó là quy tắc an toàn của chúng tôi."
+    },
+    {
+      "id": 2,
+      "title": "Dọn dẹp vệ sinh 5S",
+      "vietnamese": "Bây giờ chúng ta cần sắp xếp khu vực làm việc, loại bỏ những thứ không cần thiết, và vệ sinh sạch sẽ theo tiêu chuẩn 5S.",
+      "japanese": "今、私たちは作業エリアを整理し、不要なものを取り除き、5S基準に従ってきれいに掃除する必要があります。",
+      "romanization": "Bây giờ chúng ta cần sắp xếp khu vực làm việc, loại bỏ những thứ không cần thiết, và vệ sinh sạch sẽ theo tiêu chuẩn 5S."
+    },
+    {
+      "id": 3,
+      "title": "Báo cáo sản phẩm lỗi",
+      "vietnamese": "Tôi phát hiện ra một lỗi trong sản phẩm này. Chúng ta cần báo cáo ngay cho quản lý và không được bán sản phẩm lỗi này.",
+      "japanese": "この製品に欠陥があることに気付きました。すぐにマネージャーに報告する必要があり、この欠陥製品は販売できません。",
+      "romanization": "Tôi phát hiện ra một lỗi trong sản phẩm này. Chúng ta cần báo cáo ngay cho quản lý và không được bán sản phẩm lỗi này."
+    },
+    {
+      "id": 4,
+      "title": "Hỏi về quy trình làm việc",
+      "vietnamese": "Em xin hỏi, quy trình kiểm tra chất lượng sản phẩm như thế nào? Anh có thể hướng dẫn em không?",
+      "japanese": "申し訳ございませんが、製品品質検査のプロセスはどのようなものですか？ご指導していただけますか？",
+      "romanization": "Em xin hỏi, quy trình kiểm tra chất lượng sản phẩm như thế nào? Anh có thể hướng dẫn em không?"
+    },
+    {
+      "id": 5,
+      "title": "Báo cáo tình trạng công việc",
+      "vietnamese": "Công việc hôm nay đã hoàn thành 80%. Chúng tôi sẽ hoàn tất phần còn lại vào chiều nay.",
+      "japanese": "今日の仕事は80％完了しました。残りの部分は今日の午後に完了します。",
+      "romanization": "Công việc hôm nay đã hoàn thành 80%. Chúng tôi sẽ hoàn tất phần còn lại vào chiều nay."
+    },
+    {
+      "id": 6,
+      "title": "Yêu cầu hỗ trợ",
+      "vietnamese": "Anh ơi, máy này có vấn đề rồi. Liệu anh có thể giúp tôi sửa chữa nó không?",
+      "japanese": "すみません、この機械に問題があります。修理を手伝っていただけますか？",
+      "romanization": "Anh ơi, máy này có vấn đề rồi. Liệu anh có thể giúp tôi sửa chữa nó không?"
+    },
+    {
+      "id": 7,
+      "title": "Tuân thủ tiêu chuẩn an toàn",
+      "vietnamese": "Vui lòng không chạy hoặc đi nhanh trên sàn xưởng. Điều này có thể gây nguy hiểm cho bạn và những người khác.",
+      "japanese": "工場の床を走ったり、速く歩いたりしないでください。これはあなたと他の人に危険を及ぼす可能性があります。",
+      "romanization": "Vui lòng không chạy hoặc đi nhanh trên sàn xưởng. Điều này có thể gây nguy hiểm cho bạn và những người khác."
+    },
+    {
+      "id": 8,
+      "title": "Báo cáo về hiệu suất",
+      "vietnamese": "Tháng này, nhóm của chúng ta đã tăng năng suất lên 15% so với tháng trước. Rất tốt!",
+      "japanese": "今月、私たちのチームは先月と比べて生産性を15％向上させました。素晴らしい！",
+      "romanization": "Tháng này, nhóm của chúng ta đã tăng năng suất lên 15% so với tháng trước. Rất tốt!"
+    },
+    {
+      "id": 9,
+      "title": "Hỏi về lịch trình",
+      "vietnamese": "Khi nào chúng ta sẽ bắt đầu dự án mới? Tôi muốn biết lịch trình cụ thể.",
+      "japanese": "新しいプロジェクトをいつ開始しますか？具体的なスケジュールを知りたいです。",
+      "romanization": "Khi nào chúng ta sẽ bắt đầu dự án mới? Tôi muốn biết lịch trình cụ thể."
+    },
+    {
+      "id": 10,
+      "title": "Cảm ơn và lời tạm biệt",
+      "vietnamese": "Cảm ơn bạn rất nhiều vì đã giúp tôi ngày hôm nay. Hẹn gặp lại bạn vào ngày mai.",
+      "japanese": "今日、私を手伝ってくれてありがとうございました。明日またお会いしましょう。",
+      "romanization": "Cảm ơn bạn rất nhiều vì đã giúp tôi ngày hôm nay. Hẹn gặp lại bạn vào ngày mai."
+    }
+  ]
+}
