@@ -1,204 +1,184 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Tiếng Việt Pro - ứng dụng học tiếng Việt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cyber Tiếng Việt Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2 family=Orbitron:wght=500;700;900&family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header với Logo và Menu -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <span class="logo-text">⚡ CYBER VIỆT PRO ⚡</span>
-                <span class="logo-subtitle">Học Tiếng Việt cho Phân Xưởng</span>
+
+    <div class="app-shell">
+
+        <header class="app-header">
+            <div class="brand">
+                <span class="logo-neon" onclick="switchScreen('home')">CYBER VIỆT</span>
             </div>
-            <nav class="nav-menu">
-                <button class="nav-btn active" data-screen="home">🏠 Trang chủ</button>
-                <button class="nav-btn" data-screen="alphabet">🔤 Bảng chữ cái</button>
-                <button class="nav-btn" data-screen="grammar">📖 Ngữ pháp</button>
-                <button class="nav-btn" data-screen="dialogue">💬 Hội thoại</button>
-            </nav>
             <div class="header-stats">
-                <div class="xp-display">⭐ XP: <span id="xp-count">0</span></div>
-                <div class="streak-display">🔥 Streak: <span id="streak-count">0</span></div>
+                <span class="stat-badge xp"><i class="fa-solid fa-star"></i> <span id="xp-count">0</span> XP</span>
+                <span class="stat-badge streak"><i class="fa-solid fa-fire"></i> <span id="streak-count">0</span> ĐAY</span>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Container -->
-    <main class="main-container">
+        <main class="main-container">
 
-        <!-- ===== MÀN HÌNH TRANG CHỦ ===== -->
-        <section id="home" class="screen active">
-            <div class="home-content">
+            <section id="home" class="screen active">
                 <div class="hero-banner">
-                    <h1 class="hero-title">Chào mừng đến Cyber Tiếng Việt Pro</h1>
-                    <p class="hero-subtitle">Học tiếng Việt trong phân xưởng - An toàn, Hiệu quả, Thực tiễn</p>
+                    <h1 class="hero-title">CYBER TIẾNG VIỆT</h1>
+                    <p class="hero-subtitle">工場で使えるベトナム語学習システム</p>
                 </div>
 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🔤</div>
-                        <h3>Bảng Chữ Cái</h3>
-                        <p>Học phát âm từng chữ cái với hiệu ứng Neon</p>
-                        <button class="btn btn-primary" onclick="switchScreen('alphabet')">Bắt đầu</button>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">📖</div>
-                        <h3>Ngữ Pháp Cơ Bản</h3>
-                        <p>Học cấu trúc câu, lọc nhanh theo chủ đề</p>
-                        <button class="btn btn-primary" onclick="switchScreen('grammar')">Bắt đầu</button>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">💬</div>
-                        <h3>Hội Thoại Phân Xưởng</h3>
-                        <p>10 bài hội thoại thực tiễn + Nhắc lại giọng</p>
-                        <button class="btn btn-primary" onclick="switchScreen('dialogue')">Bắt đầu</button>
-                    </div>
-                </div>
-
-                <div class="home-stats">
+                <div class="dashboard-stats">
                     <div class="stat-box">
-                        <div class="stat-number" id="total-learned">0</div>
-                        <div class="stat-label">Bài Đã Học</div>
+                        <span class="stat-num" id="total-learned">0</span>
+                        <span class="stat-lbl">学習済み</span>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number" id="total-xp">0</div>
-                        <div class="stat-label">Tổng XP</div>
+                        <span class="stat-num" id="total-xp">0</span>
+                        <span class="stat-lbl">総XP</span>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number" id="total-days">0</div>
-                        <div class="stat-label">Ngày Liên Tiếp</div>
+                        <span class="stat-num" id="total-days">0</span>
+                        <span class="stat-lbl">継続日数</span>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- ===== MÀN HÌNH BẢNG CHỮ CÁI ===== -->
-        <section id="alphabet" class="screen">
-            <div class="screen-header">
-                <h2>Bảng Chữ Cái - Học Phát Âm</h2>
-                <button class="btn-back" onclick="switchScreen('home')">← Quay lại</button>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="progress-container">
-                <div class="progress-label">Tiến độ: <span id="alphabet-progress">0</span>%</div>
-                <div class="progress-bar">
-                    <div class="progress-fill neon-green" id="alphabet-progress-bar"></div>
-                </div>
-            </div>
-
-            <!-- Alphabet Grid -->
-            <div class="alphabet-grid" id="alphabet-grid">
-                <!-- Sẽ được tạo bởi JavaScript -->
-            </div>
-
-            <!-- Alphabet Details (Desktop) -->
-            <div class="alphabet-details">
-                <div class="detail-box">
-                    <h3 id="alphabet-char-name">Chọn một ký tự</h3>
-                    <div class="detail-content">
-                        <div class="char-display" id="alphabet-char-display">-</div>
-                        <div class="char-pronunciation" id="alphabet-pronunciation">Phát âm: -</div>
-                        <div class="char-example" id="alphabet-example">Ví dụ: -</div>
-                        <div class="audio-controls">
-                            <button class="btn btn-audio" id="alphabet-play-btn" onclick="playAlphabetAudio()">
-                                🔊 Phát Âm
-                            </button>
+                <div class="features-menu">
+                    <div class="menu-item-card" onclick="switchScreen('alphabet')" style="--accent-color: #00ffcc;">
+                        <div class="item-icon">🔤</div>
+                        <div class="item-info">
+                            <h3>アルファベット</h3>
+                            <p>発音記号と声調のマスター</p>
                         </div>
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+                    </div>
+
+                    <div class="menu-item-card" onclick="switchScreen('grammar')" style="--accent-color: #0077ff;">
+                        <div class="item-icon">📖</div>
+                        <div class="item-info">
+                            <h3>工場の基本文法</h3>
+                            <p>指示・報告・安全のテンプレート</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+                    </div>
+
+                    <div class="menu-item-card" onclick="switchScreen('dialogue')" style="--accent-color: #e040fb;">
+                        <div class="item-icon">💬</div>
+                        <div class="item-info">
+                            <h3>現場の実践会話</h3>
+                            <p>製本・印刷現場のリアルな対話</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right arrow"></i>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ===== MÀN HÌNH NGỮPHÁP ===== -->
-        <section id="grammar" class="screen">
-            <div class="screen-header">
-                <h2>Ngữ Pháp Cơ Bản</h2>
-                <button class="btn-back" onclick="switchScreen('home')">← Quay lại</button>
-            </div>
+            <section id="alphabet" class="screen">
+                <div class="screen-title-zone">
+                    <h2>アルファベットと発音</h2>
+                </div>
 
-            <!-- Progress Bar -->
-            <div class="progress-container">
-                <div class="progress-label">Tiến độ: <span id="grammar-progress">0</span>%</div>
-                <div class="progress-bar">
-                    <div class="progress-fill neon-pink" id="grammar-progress-bar"></div>
+                <div class="progress-zone">
+                    <div class="progress-info">進捗状況: <span id="alphabet-progress">0</span>%</div>
+                    <div class="progress-track">
+                        <div class="progress-fill neon-green" id="alphabet-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="alphabet-grid" id="alphabet-grid">
+                    </div>
+            </section>
+
+            <section id="grammar" class="screen">
+                <div class="screen-title-zone">
+                    <h2>工場の基本文法</h2>
+                </div>
+
+                <div class="progress-zone">
+                    <div class="progress-info">進捗状況: <span id="grammar-progress">0</span>%</div>
+                    <div class="progress-track">
+                        <div class="progress-fill neon-blue" id="grammar-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="quick-filter-bar">
+                    <button class="filter-tag active" onclick="filterGrammar('all')">全て</button>
+                    <button class="filter-tag" onclick="filterGrammar('command')">指示・命令</button>
+                    <button class="filter-tag" onclick="filterGrammar('report')">トラブル報告</button>
+                </div>
+
+                <div class="grammar-scroll-list" id="grammar-list">
+                    </div>
+            </section>
+
+            <section id="dialogue" class="screen">
+                <div class="screen-title-zone">
+                    <h2>現場の実践会話 (製本・印刷)</h2>
+                </div>
+
+                <div class="progress-zone">
+                    <div class="progress-info">進捗状況: <span id="dialogue-progress">0</span>%</div>
+                    <div class="progress-track">
+                        <div class="progress-fill neon-purple" id="dialogue-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="dialogue-scroll-list" id="dialogue-list">
+                    </div>
+            </section>
+
+        </main>
+
+        <div id="floating-player" class="mobile-floating-player hidden">
+            <div class="player-left" onclick="replayCurrentSound()">
+                <div class="player-wave-icon"><i class="fa-solid fa-volume-high"></i></div>
+                <div class="player-meta">
+                    <span class="player-title" id="floating-text">文字を選択してください</span>
                 </div>
             </div>
-
-            <!-- Quick Filter -->
-            <div class="quick-filter">
-                <button class="filter-btn active" onclick="filterGrammar('all')">📋 Tất Cả</button>
-                <button class="filter-btn" onclick="filterGrammar('command')">🎯 Mệnh Lệnh/Chỉ Thị</button>
-                <button class="filter-btn" onclick="filterGrammar('report')">⚠️ Báo Cáo Sự Cố</button>
+            <div class="player-rights">
+                <button class="btn-player-action play" onclick="playFloatingAudio()"><i class="fa-solid fa-play"></i></button>
+                <button class="btn-player-action close" onclick="closeFloatingPlayer()">×</button>
             </div>
-
-            <!-- Grammar List -->
-            <div class="grammar-list" id="grammar-list">
-                <!-- Sẽ được tạo bởi JavaScript -->
-            </div>
-        </section>
-
-        <!-- ===== MÀN HÌNH HỘI THOẠI ===== -->
-        <section id="dialogue" class="screen">
-            <div class="screen-header">
-                <h2>Hội Thoại Phân Xưởng</h2>
-                <button class="btn-back" onclick="switchScreen('home')">← Quay lại</button>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="progress-container">
-                <div class="progress-label">Tiến độ: <span id="dialogue-progress">0</span>%</div>
-                <div class="progress-bar">
-                    <div class="progress-fill neon-yellow" id="dialogue-progress-bar"></div>
-                </div>
-            </div>
-
-            <!-- Dialogue List -->
-            <div class="dialogue-list" id="dialogue-list">
-                <!-- Sẽ được tạo bởi JavaScript -->
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>⚡ Cyber Tiếng Việt Pro v1.0 | Được thiết kế cho người Nhật ⚡</p>
-    </footer>
-
-    <!-- Floating Audio Player (Mobile) -->
-    <div id="floating-player" class="floating-player hidden">
-        <div class="floating-player-content">
-            <div class="floating-text" id="floating-text">Chọn chữ để nghe phát âm</div>
-            <button class="floating-btn-play" id="floating-play-btn" onclick="playFloatingAudio()">
-                🔊 Phát Âm
-            </button>
-            <button class="floating-btn-close" onclick="closeFloatingPlayer()">×</button>
         </div>
+
+        <nav class="bottom-nav-dock">
+            <button class="nav-dock-btn active" data-screen="home" onclick="switchScreen('home')">
+                <i class="fa-solid fa-house"></i>
+                <span>ホーム</span>
+            </button>
+            <button class="nav-dock-btn" data-screen="alphabet" onclick="switchScreen('alphabet')">
+                <i class="fa-solid fa-font"></i>
+                <span>文字</span>
+            </button>
+            <button class="nav-dock-btn" data-screen="grammar" onclick="switchScreen('grammar')">
+                <i class="fa-solid fa-book-open"></i>
+                <span>文法</span>
+            </button>
+            <button class="nav-dock-btn" data-screen="dialogue" onclick="switchScreen('dialogue')">
+                <i class="fa-solid fa-comments"></i>
+                <span>会話</span>
+            </button>
+        </nav>
+
     </div>
 
-    <!-- Modal Shadowing Mode -->
-    <div id="shadowing-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>🎙️ Chế Độ Nhắc Lại (Shadowing Mode)</h3>
-                <button class="modal-close" onclick="closeShadowingModal()">×</button>
+    <div id="shadowing-modal" class="mobile-modal-overlay hidden">
+        <div class="mobile-modal-card">
+            <div class="modal-top-bar">
+                <h3>🎙️ シャドーイングモード</h3>
+                <button class="modal-close-x" onclick="closeShadowingModal()">×</button>
             </div>
-            <div class="modal-body">
-                <div class="shadowing-instruction">
-                    <p id="shadowing-text">Bạn sẽ được nghe câu mẫu, sau đó tự đọc lại:</p>
-                    <div class="countdown" id="countdown">Sẵn sàng?</div>
-                </div>
-                <div class="modal-actions">
-                    <button class="btn btn-primary" onclick="startShadowing()">▶️ Bắt Đầu</button>
-                    <button class="btn btn-secondary" onclick="closeShadowingModal()">Đóng</button>
-                </div>
+            <div class="modal-center-content">
+                <p class="instruction-txt">お手本の音声を聞いた後、復唱してください：</p>
+                <div class="target-sentence-box" id="shadowing-text">--</div>
+                <div class="countdown-display" id="countdown">READY?</div>
+            </div>
+            <div class="modal-bottom-actions">
+                <button class="btn-modal-action start" onclick="startShadowing()">▶️ スタート</button>
+                <button class="btn-modal-action cancel" onclick="closeShadowingModal()">閉じる</button>
             </div>
         </div>
     </div>
