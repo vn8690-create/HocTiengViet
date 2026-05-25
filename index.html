@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Tiếng Việt Pro - ứng dụng học tiếng Việt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header với Logo và Menu -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-text">⚡ CYBER VIỆT PRO ⚡</span>
+                <span class="logo-subtitle">Học Tiếng Việt cho Phân Xưởng</span>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-screen="home">🏠 Trang chủ</button>
+                <button class="nav-btn" data-screen="alphabet">🔤 Bảng chữ cái</button>
+                <button class="nav-btn" data-screen="grammar">📖 Ngữ pháp</button>
+                <button class="nav-btn" data-screen="dialogue">💬 Hội thoại</button>
+            </nav>
+            <div class="header-stats">
+                <div class="xp-display">⭐ XP: <span id="xp-count">0</span></div>
+                <div class="streak-display">🔥 Streak: <span id="streak-count">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- ===== MÀN HÌNH TRANG CHỦ ===== -->
+        <section id="home" class="screen active">
+            <div class="home-content">
+                <div class="hero-banner">
+                    <h1 class="hero-title">Chào mừng đến Cyber Tiếng Việt Pro</h1>
+                    <p class="hero-subtitle">Học tiếng Việt trong phân xưởng - An toàn, Hiệu quả, Thực tiễn</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔤</div>
+                        <h3>Bảng Chữ Cái</h3>
+                        <p>Học phát âm từng chữ cái với hiệu ứng Neon</p>
+                        <button class="btn btn-primary" onclick="switchScreen('alphabet')">Bắt đầu</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📖</div>
+                        <h3>Ngữ Pháp Cơ Bản</h3>
+                        <p>Học cấu trúc câu, lọc nhanh theo chủ đề</p>
+                        <button class="btn btn-primary" onclick="switchScreen('grammar')">Bắt đầu</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Hội Thoại Phân Xưởng</h3>
+                        <p>10 bài hội thoại thực tiễn + Nhắc lại giọng</p>
+                        <button class="btn btn-primary" onclick="switchScreen('dialogue')">Bắt đầu</button>
+                    </div>
+                </div>
+
+                <div class="home-stats">
+                    <div class="stat-box">
+                        <div class="stat-number" id="total-learned">0</div>
+                        <div class="stat-label">Bài Đã Học</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="total-xp">0</div>
+                        <div class="stat-label">Tổng XP</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="total-days">0</div>
+                        <div class="stat-label">Ngày Liên Tiếp</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MÀN HÌNH BẢNG CHỮ CÁI ===== -->
+        <section id="alphabet" class="screen">
+            <div class="screen-header">
+                <h2>Bảng Chữ Cái - Học Phát Âm</h2>
+                <button class="btn-back" onclick="switchScreen('home')">← Quay lại</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-label">Tiến độ: <span id="alphabet-progress">0</span>%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill neon-green" id="alphabet-progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- Alphabet Grid -->
+            <div class="alphabet-grid" id="alphabet-grid">
+                <!-- Sẽ được tạo bởi JavaScript -->
+            </div>
+
+            <!-- Alphabet Details -->
+            <div class="alphabet-details">
+                <div class="detail-box">
+                    <h3 id="alphabet-char-name">Chọn một ký tự</h3>
+                    <div class="detail-content">
+                        <div class="char-display" id="alphabet-char-display">-</div>
+                        <div class="char-pronunciation" id="alphabet-pronunciation">Phát âm: -</div>
+                        <div class="char-example" id="alphabet-example">Ví dụ: -</div>
+                        <div class="audio-controls">
+                            <button class="btn btn-audio" id="alphabet-play-btn" onclick="playAlphabetAudio()">
+                                🔊 Phát Âm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MÀN HÌNH NGỮPHÁP ===== -->
+        <section id="grammar" class="screen">
+            <div class="screen-header">
+                <h2>Ngữ Pháp Cơ Bản</h2>
+                <button class="btn-back" onclick="switchScreen('home')">← Quay lại</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-label">Tiến độ: <span id="grammar-progress">0</span>%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill neon-pink" id="grammar-progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- Quick Filter -->
+            <div class="quick-filter">
+                <button class="filter-btn active" onclick="filterGrammar('all')">📋 Tất Cả</button>
+                <button class="filter-btn" onclick="filterGrammar('command')">🎯 Mệnh Lệnh/Chỉ Thị</button>
+                <button class="filter-btn" onclick="filterGrammar('report')">⚠️ Báo Cáo Sự Cố</button>
+            </div>
+
+            <!-- Grammar List -->
+            <div class="grammar-list" id="grammar-list">
+                <!-- Sẽ được tạo bởi JavaScript -->
+            </div>
+        </section>
+
+        <!-- ===== MÀN HÌNH HỘI THOẠI ===== -->
+        <section id="dialogue" class="screen">
+            <div class="screen-header">
+                <h2>Hội Thoại Phân Xưởng</h2>
+                <button class="btn-back" onclick="switchScreen('home')">← Quay lại</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-label">Tiến độ: <span id="dialogue-progress">0</span>%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill neon-yellow" id="dialogue-progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- Dialogue List -->
+            <div class="dialogue-list" id="dialogue-list">
+                <!-- Sẽ được tạo bởi JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>⚡ Cyber Tiếng Việt Pro v1.0 | Được thiết kế cho người Nhật làm việc ở Việt Nam ⚡</p>
+    </footer>
+
+    <!-- Modal Shadowing Mode -->
+    <div id="shadowing-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🎙️ Chế Độ Nhắc Lại (Shadowing Mode)</h3>
+                <button class="modal-close" onclick="closeShadowingModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="shadowing-instruction">
+                    <p id="shadowing-text">Bạn sẽ được nghe câu mẫu, sau đó tự đọc lại:</p>
+                    <div class="countdown" id="countdown">Sẵn sàng?</div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="startShadowing()">▶️ Bắt Đầu</button>
+                    <button class="btn btn-secondary" onclick="closeShadowingModal()">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
