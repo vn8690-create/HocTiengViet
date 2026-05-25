@@ -73,8 +73,8 @@ const cyberVietData = {
         { id: 7, title: "Kiểm tra nếp nhăn giấy (紙のシワチェック)", vi: "Giấy bị nhăn rồi! Hãy dừng máy và kiểm tra lại trục cấp giấy.", jp: "紙にシワが寄っています！機械を止めて給紙軸を確認してください。" },
         { id: 8, title: "Xử lý lỗi ngược trang (丁合の乱丁・落丁対策)", vi: "Cuốn sách này bị ngược trang rồi. Phải kiểm tra lại khâu xếp trang.", jp: "この本はページが逆になっています。丁合（ちょうあい）工程を再確認してください。" },
         { id: 9, title: "Thay dao cắt định kỳ (裁断刃 của 定期交換)", vi: "Dao cắt bị cùn rồi, đường cắt không đẹp. Hãy thay dao mới.", jp: "裁断刃が鈍くなって、切り口が綺麗ではありません。新しい刃に交換してください。" },
-        { id: 10, title: "Kiểm tra số lượng thành phẩm (完成品の数量確認)", vi: "Đóng gói đủ năm mươi cuốn một thùng rồi dán nhãn lên nhé.", jp: "1箱に50冊ずつ梱包して、ラベルを貼ってくださいね。" }
-    ]
+        { id: 10, title: "Kiểm tra số lượng thành phẩm (完成品の数量確認)", vi: "Đóng gói đủ năm mươi cuốn một thùng rồi dán nhãn lên nhé.", jp: "1箱に50冊ずつ梱包して、ラベル te kudasai ne." }
+    ] // Đảm bảo đóng ngoặc vuông chuẩn chỉ ở đây, xóa sạch dấu ba chấm lỗi cũ đi bro nhé!
 };
 
 // Trạng thái lưu trữ hệ thống
@@ -86,11 +86,19 @@ let userStreak = parseInt(localStorage.getItem('cyber_viet_streak')) || 1;
 // =========================================================================
 // 2. KHỞI CHẠY ĐIỀU HƯỚNG & DOCK NAVIGATION
 // =========================================================================
-window.onload = function() {
+// Thay thế đoạn window.onload cũ bằng đoạn này để điện thoại không khóa code:
+window.addEventListener('DOMContentLoaded', (event) => {
+    userXP = parseInt(localStorage.getItem('cyber_viet_xp')) || 0;
+    userStreak = parseInt(localStorage.getItem('cyber_viet_streak')) || 1;
     updateStatsDisplay();
-    switchScreen('home');
-};
-
+    
+    // Ép hiện màn hình Home thủ công thay vì gọi hàm tự động kích hoạt âm thanh
+    document.querySelectorAll('.screen').forEach(scr => scr.classList.remove('active'));
+    const homeScreen = document.getElementById('home');
+    if (homeScreen) homeScreen.classList.add('active');
+    
+    updateProgressBars();
+});
 function switchScreen(screenId) {
     const screens = document.querySelectorAll('.screen');
     screens.forEach(scr => scr.classList.remove('active'));
